@@ -1,0 +1,626 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         23/Oct/2017  18:37:17 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\ZMain\TI2530DB\ZMain.c                #
+#    Command line       =  -f G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹ #
+#                          Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\..\..\. #
+#                          .\Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ          #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DSECURE=0            #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\ZMain\TI2530DB\ZMain.c -D ZIGBEEPRO   #
+#                          -D ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D         #
+#                          xMT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC            #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB-Pro\List\ -lA G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LE #
+#                          D\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC25 #
+#                          30-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\CoordinatorEB-Pro\List\ --diag_suppress    #
+#                          Pe001,Pa010 -o G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\2 #
+#                          0171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530- #
+#                          2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\CC25 #
+#                          30DB\CoordinatorEB-Pro\Obj\ -e --debug             #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­ #
+#                          µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStac #
+#                          k-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\Sampl #
+#                          eApp\CC2530DB\ -I G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LE #
+#                          D\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC25 #
+#                          30-2.3.0-1.4.0\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\SOURCE\ -I G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷ #
+#                          Æ÷LED\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack- #
+#                          CC2530-2.3.0-1.4.0\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I            #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MT\ -I G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ #
+#                          ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack #
+#                          -CC2530-2.3.0-1.4.0\Projects\zstack\Samples\Sample #
+#                          App\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE #
+#                          \ -I G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶ #
+#                          ¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4. #
+#                          0\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\COMPONENTS\HAL\TARGET\CC2530EB\ -I       #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\OSAL\MCU\CCSOC\ -I                 #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\OSAL\INCLUDE\ -I                   #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\AF\ -I                       #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\NWK\ -I                      #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\SEC\ -I                      #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\SAPI\ -I                     #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\SYS\ -I                      #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\STACK\ZDO\ -I                      #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\ZMAC\F8W\ -I                       #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\ZMAC\ -I                           #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\SERVICES\SADDR\ -I                 #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\SERVICES\SDATA\ -I                 #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MAC\INCLUDE\ -I                    #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MAC\HIGH_LEVEL\ -I                 #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MAC\LOW_LEVEL\srf04\ -I            #
+#                          G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\   #
+#                          -Ohz --require_prototypes                          #
+#    List file          =  G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB-Pro\List\ZMain.lst                             #
+#    Object file        =  G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õ #
+#                          ºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\Coordinato #
+#                          rEB-Pro\Obj\ZMain.r51                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+G:\4.×é²¥×éÍø-¶àÖÕ¶Ë¿ØÖÆÐ­µ÷Æ÷LED\20171023×Ô¶¯¹Ø±Õºó³öÏÖÎå·ÖÖÓÖØ¸´´¥·¢\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c
+      1          /**************************************************************************************************
+      2            Filename:       ZMain.c
+      3            Revised:        $Date: 2009-09-17 20:35:33 -0700 (Thu, 17 Sep 2009) $
+      4            Revision:       $Revision: 20782 $
+      5          
+      6            Description:    Startup and shutdown code for ZStack
+      7            Notes:          This version targets the Chipcon CC2530
+      8          
+      9          
+     10            Copyright 2005-2009 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com.
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42           * INCLUDES
+     43           */
+     44          
+     45          #include "ZComDef.h"
+     46          #include "OSAL.h"
+     47          #include "OSAL_Nv.h"
+     48          #include "OnBoard.h"
+     49          #include "ZMAC.h"
+     50          
+     51          #ifndef NONWK
+     52            #include "AF.h"
+     53          #endif
+     54          
+     55          /* Hal */
+     56          #include "hal_lcd.h"
+     57          #include "hal_led.h"
+     58          #include "hal_adc.h"
+     59          #include "hal_sleep.h"
+     60          #include "hal_drivers.h"
+     61          #include "hal_assert.h"
+     62          #include "hal_flash.h"
+     63          
+     64          /*********************************************************************
+     65           * MACROS
+     66           */
+     67          
+     68          /*********************************************************************
+     69           * CONSTANTS
+     70           */
+     71          
+     72          // Maximun number of Vdd samples checked before go on
+     73          #define MAX_VDD_SAMPLES  3
+     74          #define ZMAIN_VDD_LIMIT  HAL_ADC_VDD_LIMIT_4
+     75          
+     76          /*********************************************************************
+     77           * TYPEDEFS
+     78           */
+     79          
+     80          /*********************************************************************
+     81           * GLOBAL VARIABLES
+     82           */
+     83          uint8 open_flag=0;  //¿ª»úÐÅºÅ 
+     84          uint8 close_flag=0;  //¹Ø»úÐÅºÅ
+     85          uint8 timesleep=0;   //¶¨Ê±ÐÝÃß 
+     86          uint8 untimesleep=0;//ÎÞÐÝÖ¹ÐÝÃß
+     87          uint8 timesleep_count=0; //ÓÃÓÚ²úÉú1Ð¡Ê±¶¨Ê±ÐÝÃß
+     88          uint8 timesleep_test=0;
+     89          
+     90          extern uint8 count_open;
+     91          extern uint8 count_close;
+     92          extern uint8 count_open;
+     93          extern uint8 count_close;
+     94          /*********************************************************************
+     95           * EXTERNAL VARIABLES
+     96           */
+     97          
+     98          /*********************************************************************
+     99           * EXTERNAL FUNCTIONS
+    100           */
+    101          
+    102          extern bool HalAdcCheckVdd (uint8 limit);
+    103          
+    104          /*********************************************************************
+    105           * LOCAL VARIABLES
+    106           */
+    107          
+    108          /*********************************************************************
+    109           * LOCAL FUNCTIONS
+    110           */
+    111          
+    112          static void zmain_dev_info( void );
+    113          static void zmain_ext_addr( void );
+    114          static void zmain_vdd_check( void );
+    115          
+    116          #ifdef LCD_SUPPORTED
+    117          static void zmain_lcd_init( void );
+    118          #endif
+    119          
+    120          /*********************************************************************
+    121           * @fn      main
+    122           * @brief   First function called after startup.
+    123           * @return  don't care
+    124           */
+    125          int main( void )
+    126          {
+    127            // Turn off interrupts
+    128           osal_int_disable( INTS_ALL );
+    129          
+    130            // Initialization for board related stuff such as LEDs
+    131            HAL_BOARD_INIT();
+    132          
+    133            
+    134            // Make sure supply voltage is high enough to run
+    135            zmain_vdd_check();
+    136          
+    137            // Initialize board I/O
+    138            InitBoard( OB_COLD );
+    139          
+    140            // Initialze HAL drivers
+    141            HalDriverInit();
+    142            
+    143          ////////////////////////////////////////////////////////
+    144            
+    145            
+    146            // Initialize NV System
+    147            osal_nv_init( NULL );
+    148          
+    149            // Initialize the MAC
+    150            ZMacInit();
+    151          
+    152            // Determine the extended address
+    153            zmain_ext_addr();
+    154          
+    155            // Initialize basic NV items
+    156            zgInit(); 
+    157          
+    158          #ifndef NONWK
+    159            // Since the AF isn't a task, call it's initialization routine
+    160            afInit();
+    161          #endif
+    162          
+    163            // Initialize the operating system
+    164            osal_init_system();
+    165          
+    166            // Allow interrupts
+    167            osal_int_enable( INTS_ALL );
+    168          
+    169            // Final board initialization
+    170            InitBoard( OB_READY );
+    171          
+    172            // Display information about this device
+    173            zmain_dev_info();
+    174          
+    175            /* Display the device info on the LCD */
+    176          #ifdef LCD_SUPPORTED
+    177            zmain_lcd_init();
+    178          #endif
+    179          
+    180          #ifdef WDT_IN_PM1
+    181            /* If WDT is used, this is a good place to enable it. */
+    182            WatchDogEnable( WDTIMX );
+    183          #endif
+    184          //////////////////////////////////////////////
+    185            InitSleepTimer();
+    186              
+    187            P0INP = 0X00; //ÉèÖÃP0¿ÚÊäÈëµçÂ·Ä£Ê½ÎªÉÏÀ­/ÏÂÀ­
+    188            P2INP |= 0X20; //Ñ¡ÔñÏÂÀ­                 // ÉÏÀ­ºÄµç£¿£¿£¿£¿£¿
+    189          
+    190           
+    191             P0IEN |= 0X31; //P00ÉèÖÃÎªÖÐ¶Ï·½Ê½
+    192          
+    193            PICTL &= ~0X01; //ÉÏÉýÑØ´¥·¢
+    194          
+    195            EA = 1;
+    196            IEN1 |= 0X20; // ¿ªP0¿Ú×ÜÖÐ¶Ï
+    197            P0IFG |= 0x00; //ÇåÖÐ¶Ï±êÖ¾
+    198          
+    199            P1DIR |= 0x03; //P1.0¶¨ÒåÎªÊä³ö¿Ú
+    200            LED1=1;
+    201            LED2=1;
+    202            
+    203            Delay_MS(500);  // ¿ª»úµÆ ÉÁÒ»ÏÂ Í¬Ê±ÑÓÊ±Ò»ÏÂ
+    204            LED_Flick();
+    205            
+    206            timesleep=0;
+    207            untimesleep=1;
+    208            SysPowerMode(3);  //¿ª»ú½øÈëÉî¶ÈË¯Ãß µÈ´ý°´¼ü»½ÐÑ
+    209            
+    210            LED_Flick();
+    211           
+    212            //////////////////////////////////////////////////////////
+    213            osal_start_system(); // No Return from here
+    214          
+    215            return 0;  // Shouldn't get here.
+    216          } // main()
+    217          
+    218          #pragma vector = ST_VECTOR
+    219          __interrupt void ST_ISR(void)
+                                  ^
+Error[Pa045]: function "ST_ISR" has no prototype
+    220          {
+    221            STIF = 0; //Çå±êÖ¾Î»
+    222            SysPowerMode(4); //½øÈëÕý³£¹¤×÷Ä£Ê½
+    223          }
+    224          
+    225          #pragma vector = P0INT_VECTOR   //P0¿ÚÖÐ¶Ïº¯Êý
+    226          __interrupt void P0_ISR(void)
+                                  ^
+Error[Pa045]: function "P0_ISR" has no prototype
+    227          {
+    228            if(P0IFG>0)
+    229            {
+    230              P0IFG = 0;
+    231            }
+    232            LED1=!LED1;
+    233            MicroWait (50000);     // Wait 50ms
+    234            MicroWait (50000); 
+    235            MicroWait (50000);     // Wait 50ms
+    236            MicroWait (50000); 
+    237            
+    238              if(timesleep==0 && untimesleep==1) //±íÊ¾ ÔÚ ÎÞÐÝÖ¹Ë¯ÃßÖÐ ÓÐ°´¼ü
+    239              {
+    240                open_flag=1;  //×¼±¸¿ª»ú
+    241                close_flag=0;
+    242                count_open=0;
+    243                count_close=0;
+    244                SysPowerMode(4);
+    245                timesleep=0;
+    246                untimesleep=0;
+    247              }
+    248              if(timesleep==1 && untimesleep==0)  // ÔÚ¶¨Ê±Ë¯ÃßÄ£Ê½ÏÂ ÓÐ°´¼ü°´ÏÂ
+    249              {
+    250               
+    251                close_flag=1;   // ×¼±¸¹Ø»ú
+    252                open_flag=0;
+    253                count_open=0;
+    254                count_close=0;
+    255                SysPowerMode(4);
+    256                timesleep_test=timesleep_count;  //½«count Öµ¸³¸ø test ÓÃÀ´²âÊÔÊÇ·ñÔÚÁ½·ÖÖÓÄÚÓÐ´¥·¢£¬
+    257                                                 // ÈôÓÐ£¬±íÊ¾¹ÊÕÏ ¿ÉÄÜÐèÒª¸ü»»µç³Ø
+    258                timesleep_count=126;  //ÉèÖÃÒ»¸ö´óµÄÊý   ²»ÔÙ½øÈë¶¨Ê±ÐÝÃß
+    259                timesleep=0;
+    260                untimesleep=0;
+    261              }
+    262            P0IF = 0;
+    263            
+    264          }
+    265          
+    266          /*********************************************************************
+    267           * @fn      zmain_vdd_check
+    268           * @brief   Check if the Vdd is OK to run the processor.
+    269           * @return  Return if Vdd is ok; otherwise, flash LED, then reset
+    270           *********************************************************************/
+    271          static void zmain_vdd_check( void )
+    272          {
+    273            uint8 vdd_passed_count = 0;
+    274            bool toggle = 0;
+    275          
+    276            // Repeat getting the sample until number of failures or successes hits MAX
+    277            // then based on the count value, determine if the device is ready or not
+    278            while ( vdd_passed_count < MAX_VDD_SAMPLES )
+    279            {
+    280              if ( HalAdcCheckVdd (ZMAIN_VDD_LIMIT) )
+    281              {
+    282                vdd_passed_count++;    // Keep track # times Vdd passes in a row
+    283                MicroWait (10000);     // Wait 10ms to try again
+    284              }
+    285              else
+    286              {
+    287                vdd_passed_count = 0;  // Reset passed counter
+    288                MicroWait (50000);     // Wait 50ms
+    289                MicroWait (50000);     // Wait another 50ms to try again
+    290              }
+    291          
+    292              /* toggle LED1 and LED2 */
+    293              if (vdd_passed_count == 0)
+    294              {
+    295                if ((toggle = !(toggle)))
+    296                  HAL_TOGGLE_LED1();
+    297                else
+    298                  HAL_TOGGLE_LED2();
+    299              }
+    300            }
+    301          
+    302            /* turn off LED1 */
+    303            HAL_TURN_OFF_LED1();
+    304            HAL_TURN_OFF_LED2();
+    305          }
+    306          
+    307          /**************************************************************************************************
+    308           * @fn          zmain_ext_addr
+    309           *
+    310           * @brief       Execute a prioritized search for a valid extended address and write the results
+    311           *              into the OSAL NV system for use by the system. Temporary address not saved to NV.
+    312           *
+    313           * input parameters
+    314           *
+    315           * None.
+    316           *
+    317           * output parameters
+    318           *
+    319           * None.
+    320           *
+    321           * @return      None.
+    322           **************************************************************************************************
+    323           */
+    324          static void zmain_ext_addr(void)
+    325          {
+    326            uint8 nullAddr[Z_EXTADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    327            uint8 writeNV = TRUE;
+    328          
+    329            // First check whether a non-erased extended address exists in the OSAL NV.
+    330            if ((SUCCESS != osal_nv_item_init(ZCD_NV_EXTADDR, Z_EXTADDR_LEN, NULL))  ||
+    331                (SUCCESS != osal_nv_read(ZCD_NV_EXTADDR, 0, Z_EXTADDR_LEN, aExtendedAddress)) ||
+    332                (osal_memcmp(aExtendedAddress, nullAddr, Z_EXTADDR_LEN)))
+    333            {
+    334              // Attempt to read the extended address from the location on the lock bits page
+    335              // where the programming tools know to reserve it.
+    336              HalFlashRead(HAL_FLASH_IEEE_PAGE, HAL_FLASH_IEEE_OSET, aExtendedAddress, Z_EXTADDR_LEN);
+    337          
+    338              if (osal_memcmp(aExtendedAddress, nullAddr, Z_EXTADDR_LEN))
+    339              {
+    340                // Attempt to read the extended address from the designated location in the Info Page.
+    341                if (!osal_memcmp((uint8 *)(P_INFOPAGE+HAL_INFOP_IEEE_OSET), nullAddr, Z_EXTADDR_LEN))
+    342                {
+    343                  osal_memcpy(aExtendedAddress, (uint8 *)(P_INFOPAGE+HAL_INFOP_IEEE_OSET), Z_EXTADDR_LEN);
+    344                }
+    345                else  // No valid extended address was found.
+    346                {
+    347                  uint8 idx;
+    348                  
+    349          #if !defined ( NV_RESTORE )
+    350                  writeNV = FALSE;  // Make this a temporary IEEE address
+    351          #endif
+    352          
+    353                  /* Attempt to create a sufficiently random extended address for expediency.
+    354                   * Note: this is only valid/legal in a test environment and
+    355                   *       must never be used for a commercial product.
+    356                   */
+    357                  for (idx = 0; idx < (Z_EXTADDR_LEN - 2);)
+    358                  {
+    359                    uint16 randy = osal_rand();
+    360                    aExtendedAddress[idx++] = LO_UINT16(randy);
+    361                    aExtendedAddress[idx++] = HI_UINT16(randy);
+    362                  }
+    363                  // Next-to-MSB identifies ZigBee devicetype.
+    364          #if ZG_BUILD_COORDINATOR_TYPE && !ZG_BUILD_JOINING_TYPE
+    365                  aExtendedAddress[idx++] = 0x10;
+    366          #elif ZG_BUILD_RTRONLY_TYPE
+    367                  aExtendedAddress[idx++] = 0x20;
+    368          #else
+    369                  aExtendedAddress[idx++] = 0x30;
+    370          #endif
+    371                  // MSB has historical signficance.
+    372                  aExtendedAddress[idx] = 0xF8;
+    373                }
+    374              }
+    375          
+    376              if (writeNV)
+    377              {
+    378                (void)osal_nv_write(ZCD_NV_EXTADDR, 0, Z_EXTADDR_LEN, aExtendedAddress);
+    379              }
+    380            }
+    381          
+    382            // Set the MAC PIB extended address according to results from above.
+    383            (void)ZMacSetReq(MAC_EXTENDED_ADDRESS, aExtendedAddress);
+    384          }
+    385          
+    386          /**************************************************************************************************
+    387           * @fn          zmain_dev_info
+    388           *
+    389           * @brief       This displays the IEEE (MSB to LSB) on the LCD.
+    390           *
+    391           * input parameters
+    392           *
+    393           * None.
+    394           *
+    395           * output parameters
+    396           *
+    397           * None.
+    398           *
+    399           * @return      None.
+    400           **************************************************************************************************
+    401           */
+    402          static void zmain_dev_info(void)
+    403          {
+    404          #ifdef LCD_SUPPORTED
+    405            uint8 i;
+    406            uint8 *xad;
+    407            uint8 lcd_buf[Z_EXTADDR_LEN*2+1];
+    408          
+    409            // Display the extended address.
+    410            xad = aExtendedAddress + Z_EXTADDR_LEN - 1;
+    411          
+    412            for (i = 0; i < Z_EXTADDR_LEN*2; xad--)
+    413            {
+    414              uint8 ch;
+    415              ch = (*xad >> 4) & 0x0F;
+    416              lcd_buf[i++] = ch + (( ch < 10 ) ? '0' : '7');
+    417              ch = *xad & 0x0F;
+    418              lcd_buf[i++] = ch + (( ch < 10 ) ? '0' : '7');
+    419            }
+    420            lcd_buf[Z_EXTADDR_LEN*2] = '\0';
+    421            HalLcdWriteString( "IEEE: ", HAL_LCD_LINE_1 );
+    422            HalLcdWriteString( (char*)lcd_buf, HAL_LCD_LINE_2 );
+    423          #endif
+    424          }
+    425          
+    426          #ifdef LCD_SUPPORTED
+    427          /*********************************************************************
+    428           * @fn      zmain_lcd_init
+    429           * @brief   Initialize LCD at start up.
+    430           * @return  none
+    431           *********************************************************************/
+    432          static void zmain_lcd_init ( void )
+    433          {
+    434          #ifdef SERIAL_DEBUG_SUPPORTED
+    435            {
+    436              HalLcdWriteString( "TexasInstruments", HAL_LCD_LINE_1 );
+    437          
+    438          #if defined( MT_MAC_FUNC )
+    439          #if defined( ZDO_COORDINATOR )
+    440                HalLcdWriteString( "MAC-MT Coord", HAL_LCD_LINE_2 );
+    441          #else
+    442                HalLcdWriteString( "MAC-MT Device", HAL_LCD_LINE_2 );
+    443          #endif // ZDO
+    444          #elif defined( MT_NWK_FUNC )
+    445          #if defined( ZDO_COORDINATOR )
+    446                HalLcdWriteString( "NWK Coordinator", HAL_LCD_LINE_2 );
+    447          #else
+    448                HalLcdWriteString( "NWK Device", HAL_LCD_LINE_2 );
+    449          #endif // ZDO
+    450          #endif // MT_FUNC
+    451            }
+    452          #endif // SERIAL_DEBUG_SUPPORTED
+    453          }
+    454          #endif
+    455          
+    456          /*********************************************************************
+    457          *********************************************************************/
+
+Errors: 2
+Warnings: none

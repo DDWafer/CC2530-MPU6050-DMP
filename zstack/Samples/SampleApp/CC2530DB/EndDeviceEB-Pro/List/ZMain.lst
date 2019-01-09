@@ -1,0 +1,211 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         27/Nov/2018  11:27:09 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\ZMain\TI2530DB\ #
+#                          ZMain.c                                            #
+#    Command line       =  -f F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú #
+#                          \ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\Samp #
+#                          leApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cf #
+#                          g (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f  #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg  #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFF1                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\ZMain\TI2530DB\ #
+#                          ZMain.c -D ZIGBEEPRO -D NWK_AUTO_POLL -D ZTOOL_P1  #
+#                          -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D     #
+#                          LCD_SUPPORTED=DEBUG -lC F:\key_pro\AAAAAgraduation #
+#                          _project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Project #
+#                          s\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB-Pr #
+#                          o\List\ -lA F:\key_pro\AAAAAgraduation_project\Ωªª #
+#                          •œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\EndDeviceEB-Pro\List\      #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\EndDeviceEB-Pro\Obj\ -e --debug        #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I F:\key_pro\AAAAAgraduation #
+#                          _project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Project #
+#                          s\zstack\Samples\SampleApp\CC2530DB\ -I            #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\SOURCE\ -I                          #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I            #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\MT\ -I       #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ #
+#                           -I F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã– #
+#                          Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\Sam #
+#                          pleApp\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARG #
+#                          ET\CC2530EB\ -I F:\key_pro\AAAAAgraduation_project #
+#                          \Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack #
+#                          \Samples\SampleApp\CC2530DB\..\..\..\..\..\COMPONE #
+#                          NTS\OSAL\MCU\CCSOC\ -I F:\key_pro\AAAAAgraduation_ #
+#                          project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects #
+#                          \zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\ #
+#                          COMPONENTS\OSAL\INCLUDE\ -I                        #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\AF\    #
+#                          -I F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú #
+#                          \ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\Samp #
+#                          leApp\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK #
+#                          \ -I F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã #
+#                          –Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\S #
+#                          EC\ -I F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥ #
+#                          ≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\ #
+#                          SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\STACK #
+#                          \SAPI\ -I F:\key_pro\AAAAAgraduation_project\Ωªª•œ #
+#                          µÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Sampl #
+#                          es\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ST #
+#                          ACK\SYS\ -I F:\key_pro\AAAAAgraduation_project\Ωªª #
+#                          •œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\ZDO\ -I F:\key_pro\AAAAAgraduation_project\Ω #
+#                          ªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\S #
+#                          amples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\ZMAC\F8W\ -I F:\key_pro\AAAAAgraduation_project\ #
+#                          Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\ #
+#                          Samples\SampleApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\ZMAC\ -I F:\key_pro\AAAAAgraduation_project\Ωªª #
+#                          •œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Sam #
+#                          ples\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          SERVICES\SADDR\ -I F:\key_pro\AAAAAgraduation_proj #
+#                          ect\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zst #
+#                          ack\Samples\SampleApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\SERVICES\SDATA\ -I                          #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\ #
+#                           -I F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã– #
+#                          Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\Sam #
+#                          pleApp\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH #
+#                          _LEVEL\ -I F:\key_pro\AAAAAgraduation_project\Ωªª• #
+#                          œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samp #
+#                          les\SampleApp\CC2530DB\..\..\..\..\..\COMPONENTS\M #
+#                          AC\LOW_LEVEL\srf04\ -I F:\key_pro\AAAAAgraduation_ #
+#                          project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects #
+#                          \zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\ #
+#                          COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -I     #
+#                          F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\..\..\..\..\..\..\..\..\ -Ohz          #
+#    List file          =  F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\EndDeviceEB-Pro\List\ZMain.lst         #
+#    Object file        =  F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ #
+#                          ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\EndDeviceEB-Pro\Obj\ZMain.r51          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+F:\key_pro\AAAAAgraduation_project\Ωªª•œµÕ≥≥Ã–Ú\ ÷ª∑\ ÷ª∑\÷ª∑¢ÀÕ ˝æ›\Projects\zstack\ZMain\TI2530DB\ZMain.c
+      1          
+      2          #include "net_ID.h" 
+      3          
+      4          //typedef unsigned short int u16;
+      5          extern void ini(void);
+      6          extern void osal_start_system(void);
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      7          unsigned short int zgConfigPANID=net_ID;
+   \                     zgConfigPANID:
+   \   000000                DS 2
+   \   000002                REQUIRE `?<Initializer for zgConfigPANID>`
+   \   000002                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      8          int main( void )
+   \                     main:
+      9          {
+   \   000000                ; Auto size: 0
+     10            ini();
+   \   000000                ; Setup parameters for call to function ini
+   \   000000   12....       LCALL   ??ini?relay
+     11            osal_start_system(); // No Return from here
+   \   000003                ; Setup parameters for call to function osal_start_system
+   \   000003   12....       LCALL   ??osal_start_system?relay
+     12          
+     13            return 0;  // Shouldn't get here.
+   \   000006   7A00         MOV     R2,#0x0
+   \   000008   7B00         MOV     R3,#0x0
+   \   00000A   02....       LJMP    ?BRET
+     14          } // main()
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zgConfigPANID>`:
+   \   000000   9200         DW 146
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??main?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    main
+
+   Maximum stack usage in bytes:
+
+     Function               ISTACK PSTACK XSTACK
+     --------               ------ ------ ------
+     main                       0      0      0
+       -> ini                   0      0      0
+       -> osal_start_system     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label                   Bytes
+     --------------                   -----
+     zgConfigPANID                       2
+     main                               13
+     ?<Initializer for zgConfigPANID>    2
+     ??main?relay                        6
+
+ 
+ 13 bytes in segment BANKED_CODE
+  6 bytes in segment BANK_RELAYS
+  2 bytes in segment XDATA_I
+  2 bytes in segment XDATA_ID
+ 
+ 21 bytes of CODE  memory
+  2 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,53 @@
+[DebugChecksum]
+Checksum=-1022915479
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[CallStack]
+ShowArgs=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Aliases]
+A0=_ "G:\4.组播组网-多终端控制协调器LED\20170913无线开关程序+睡眠定时（完成）一次30s120次为1小时\ZStack-CC2530-2.3.0-1.4.0\Components\mac\low_level\srf04\single_chip\mac_mcu.c" ""
+A1=_ "G:\4.组播组网-多终端控制协调器LED\20170913无线开关程序+睡眠定时（完成）一次30s120次为1小时\ZStack-CC2530-2.3.0-1.4.0\Components\osal\common\OSAL_Timers.c" ""
+A2=_ "G:\4.组播组网-多终端控制协调器LED\20170913无线开关程序+睡眠定时（完成）一次30s120次为1小时\ZStack-CC2530-2.3.0-1.4.0\Components\stack\zdo\ZDObject.c" ""
+A3=_ "G:\4.组播组网-多终端控制协调器LED\20170913无线开关程序+睡眠定时（完成）一次30s120次为1小时\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A4=_ "G:\4.组播组网-多终端控制协调器LED\20171018无线开关程序+睡眠定时（完成）一次30s120次为1小时，初始化显示\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A5=_ "G:\4.组播组网-多终端控制协调器LED\20171023自动关闭后出现五分钟重复触发\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+A6=_ "G:\4.组播组网-多终端控制协调器LED\20171023自动关闭后出现五分钟重复触发\只发送数据\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""
+Count=7
+SuppressDialog=1
